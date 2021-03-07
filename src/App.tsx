@@ -6,7 +6,7 @@ import Welcome from './pages/Welcome';
 function App() {
   return (
     <>
-      <Welcome/>
+      <SignIn/>
       <GlobalStyles />
     </>
   );
