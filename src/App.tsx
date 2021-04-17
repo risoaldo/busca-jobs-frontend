@@ -1,13 +1,15 @@
 import GlobalStyles from "./styles/global";
+import { BrowserRouter } from 'react-router-dom';
 
-import SignIn from './pages/Signin';
-import Welcome from './pages/Welcome';
+import Routes from './routes';
 
-function App() {
+const App = () => {
   return (
     <>
-      <SignIn/>
-      <GlobalStyles />
+      <BrowserRouter>
+        <Routes />
+        <GlobalStyles />
+      </BrowserRouter>
     </>
   );
 }

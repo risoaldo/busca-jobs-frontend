@@ -2,10 +2,29 @@ import styled from "styled-components";
 
 import { shade } from "polished";
 
+import { device } from '../../Utils/devicesWidth';
+
 export const Container = styled.div`
   height: 100vh;
   display: flex;
+  flex-direction: row;
   align-items: stretch;
+
+  @media ${device.tablet} {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media ${device.mobileS} {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media ${device.mobileM} {
+    flex-direction: column;
+    align-items: center;
+  }
+
 `;
 
 export const Content = styled.div`
@@ -17,7 +36,33 @@ export const Content = styled.div`
   padding: 0 0 0 90px;
 
   width: 100%;
-  max-width: 700px;
+  max-width: 600px;
+
+  @media ${device.mobileM} {
+    align-items: center;
+    padding: 0;
+    max-width: 200px;
+
+  }
+
+  @media ${device.mobileS} {
+    align-items: center;
+    padding: 0;
+    max-width: 200px;
+
+  }
+
+  @media ${device.tablet} {
+    align-items: center;
+    padding: 0;
+    margin-top: 40px;
+
+    p{
+      text-align: center;
+    }
+
+
+  }
 
   img{
     margin: 30px 0;
@@ -61,7 +106,21 @@ export const Content = styled.div`
 
 export const Background = styled.div`
   flex: 1;
+
+  @media ${device.mobileS} {
+    img{
+      margin-top: 30px;
+      width: 400px;
+    }
+  }
+  @media ${device.mobileM} {
+    img{
+      margin-top: 30px;
+      width: 400px;
+    }
+  }
   img {
     margin-top: 50px;
   }
 `;
+
